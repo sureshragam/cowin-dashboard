@@ -1,0 +1,45 @@
+/* Write your CSS here */
+.cowin-dashboard-container {
+  background-color: #161625;
+  min-height: 100vh;
+  padding: 0 30px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+nav > img {
+  width: 30px;
+  margin-right: 15px;
+}
+nav > h1 {
+  color: #2cc6c6;
+  font-size: 30px;
+}
+.cowin-dashboard-container > h1 {
+  color: #ffffff;
+}
+.row {
+  background-color: #1c1c2b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.row > h1 {
+  color: #cbd5e1;
+}
+.failure-view-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.failure-view-container > img {
+  width: 80%;
+}
+.loading-view-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
