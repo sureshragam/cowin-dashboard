@@ -1,12 +1,5 @@
 // Write your code here
-import {
-  BarChart,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  Bar,
-  Legend,
-} from 'recharts'
+import {BarChart, XAxis, YAxis, Bar, Legend} from 'recharts'
 
 const VaccinationCoverage = props => {
   const {data} = props
@@ -20,15 +13,30 @@ const VaccinationCoverage = props => {
   return (
     <div className="row">
       <h1>Vaccination Coverage</h1>
-      <ResponsiveContainer width="100%" height={500}>
-        <BarChart data={data} margin={{top: 5, bottom: 15}}>
-          <XAxis dataKey="vaccine_date" tick={{strokeWidth: 1}} />
-          <YAxis tickFormatter={dataFormatter} />
-          <Legend />
-          <Bar dataKey="dose_1" name="Dose 1" barSize="20%" fill=" #5a8dee" />
-          <Bar dataKey="dose_2" name="Dose 2" barSize="20%" fill="#f54394" />
-        </BarChart>
-      </ResponsiveContainer>
+      <BarChart
+        width={1000}
+        height={300}
+        data={data}
+        margin={{top: 5, bottom: 15}}
+      >
+        <XAxis
+          dataKey="vaccine_date"
+          tick={{
+            stroke: 'gray',
+            strokeWidth: 1,
+          }}
+        />
+        <YAxis
+          tickFormatter={dataFormatter}
+          tick={{
+            stroke: 'gray',
+            strokeWidth: 1,
+          }}
+        />
+        <Legend />
+        <Bar dataKey="dose_1" name="Dose 1" barSize="20%" fill=" #5a8dee" />
+        <Bar dataKey="dose_2" name="Dose 2" barSize="20%" fill="#f54394" />
+      </BarChart>
     </div>
   )
 }
